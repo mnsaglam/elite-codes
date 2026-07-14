@@ -7,9 +7,11 @@
  * faster.
  */
 
+#include <algorithm>
 #include <cassert>
-#include <vector>
+#include <climits>
 #include <iostream>
+#include <vector>
 
 using std::vector;
 using std::max;
@@ -24,7 +26,7 @@ vector<int> make_segt(const vector<int> &a) {
 }
 
 void update_segt(vector<int> &s, int i, int val) {
-  const int n = s.size();
+  const int n = s.size() >> 1;
   for (s[i += n] = val; i > 1; i >>= 1)
     s[i >> 1] = max(s[i], s[i ^ 1]);
 }
