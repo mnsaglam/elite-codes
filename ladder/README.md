@@ -11,6 +11,13 @@ Pictorially, this is a ladder that goes down right. Depending on what operations
 we need to support, a ladder can be maintained via an array, stack, heap or
 segment tree (in increasing flexibility but complexity).
 
-The simplest case is append to right and increase-y operations. This can be
+The simplest case is append-to-right and increase-y operations. This can be
 handled with a single array. See [LIS](../bsearch/lis.cpp) problem (in this
 viewpoint, y coordinate of the LIS problem is inverted).
+
+The other common case is when we receive points in x sorted order. In this case,
+a stack is enough to maintain the set of nondominated points. See
+[window-max](./window-max.cpp) problem.
+
+When the inserts are not x-ordered, we can still maintain the non-dominated list
+with a lazy heap. See for instance the [skyline](./skyline.cpp) problem.

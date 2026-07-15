@@ -8,3 +8,6 @@ See
 
  - [bsearch](./bsearch/basics.cpp) for my notes on binary search
    (bisect and lift variants)
+
+ - [ladder](./ladder/README.md) for my notes on what I call a ladder: 2d points
+   with domination order.
